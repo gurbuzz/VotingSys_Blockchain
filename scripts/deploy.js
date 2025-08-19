@@ -4,9 +4,10 @@ async function main() {
 
   // "Voting" kontratını  adayları ve 90 gün oy süresi ile dağıt
   const Voting_ = await Voting.deploy(["Erdinç AVAROĞLU", "Hamza EROL", "Volkan YAMAÇLI", "Ramazan AKKURT"], 90);
+  await Voting_.waitForDeployment();
   
   // Dağıtılan kontratın adresini konsola yazdır
-  console.log("Kontrat adresi:", Voting_.address);
+  console.log("Kontrat adresi:", await Voting_.getAddress());
 }
   
 // main fonksiyonunu çalıştır ve başarı durumunda çıkış kodunu 0 olarak ayarla
