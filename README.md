@@ -77,6 +77,7 @@ Kontratın doğru ağa deploy edildiğinden emin ol (Ganache açık olmalı).
 ABI güncel olmalı (artifacts/contracts/Voting.sol/Voting.json → frontend’e kopyalanır).
 
 Komut Özeti
+
 # Derleme
 npx hardhat compile
 
